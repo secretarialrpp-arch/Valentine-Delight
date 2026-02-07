@@ -75,16 +75,16 @@ const ShyNoButton = ({ onNoClick }: ShyNoButtonProps) => {
   const lastMessageChangeRef = useRef<number>(0);
   const lastMoveRef = useRef<number>(0);
 
-  // Initialize button position - centered like Yes button
+  // Initialize button position - to the right of Yes button (same line)
   useEffect(() => {
     if (buttonRef.current && containerRef.current) {
       const container = containerRef.current.getBoundingClientRect();
       const button = buttonRef.current.getBoundingClientRect();
       
-      // Center the button (same as Yes button position)
+      // Position to the right of center (next to Yes button)
       setPosition({
-        x: container.width / 2 - button.width / 2,
-        y: container.height / 2 - button.height / 2 + 60, // Slightly below center to be under Yes
+        x: container.width / 2 + 70, // Right of center, next to Yes button
+        y: container.height / 2 - button.height / 2 + 10, // Same vertical level
       });
       setIsInitialized(true);
     }
@@ -94,8 +94,8 @@ const ShyNoButton = ({ onNoClick }: ShyNoButtonProps) => {
     if (!buttonRef.current || !containerRef.current) return;
 
     const now = Date.now();
-    // Throttle movement to every 300ms for smoother, slower feel
-    if (now - lastMoveRef.current < 300) return;
+    // Throttle movement to every 550ms for smoother, slower feel
+    if (now - lastMoveRef.current < 550) return;
 
     const button = buttonRef.current.getBoundingClientRect();
     const container = containerRef.current.getBoundingClientRect();
@@ -147,8 +147,8 @@ const ShyNoButton = ({ onNoClick }: ShyNoButtonProps) => {
 
       setPosition({ x: newX, y: newY });
       
-      // Only change message every 800ms for smoother reading
-      if (now - lastMessageChangeRef.current > 800) {
+      // Only change message every 700ms for smoother reading
+      if (now - lastMessageChangeRef.current > 700) {
         setMessageIndex((prev) => (prev + 1) % teasingMessages.length);
         lastMessageChangeRef.current = now;
       }

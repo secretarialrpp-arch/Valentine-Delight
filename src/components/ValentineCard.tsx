@@ -56,19 +56,20 @@ const ValentineCard = () => {
           <p className="text-muted-foreground font-clean mb-8 text-base md:text-lg">
             I promise to make every moment special ✨
           </p>
-
-          {/* Yes button - centered and prominent */}
-          <div className="flex justify-center">
+          {/* Buttons container - side by side */}
+          <div className="flex justify-center items-center gap-4">
             <button 
               onClick={handleYesClick}
               className="btn-yes pulse-gentle"
             >
               Yes ❤️
             </button>
+            {/* Placeholder for No button alignment - actual No button floats */}
+            <div className="w-[120px]" />
           </div>
           
           <p className="text-sm text-muted-foreground/60 mt-6 font-clean italic">
-            (The other button is around here somewhere...)
+            (The other button is a bit shy...)
           </p>
         </div>
       </div>
