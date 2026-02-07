@@ -35,7 +35,7 @@
     --input: 350 30% 88%;
     --ring: 350 80% 60%;
 
-    --radius: 1rem;
+    --radius: 1.75rem;
 
     /* Custom romantic tokens */
     --rose-soft: 350 100% 95%;
@@ -82,6 +82,10 @@
     /* Fonts */
     --font-romantic: 'Playfair Display', Georgia, serif;
     --font-clean: 'Inter', system-ui, sans-serif;
+    --shadow-sm: 0px 1px 1.5px 0px hsla(0, 0%, 0%, 0.1);
+    --shadow: 0px 1px 3px 0px hsla(0, 0%, 0%, 0.1);
+    --shadow-md: 0px 1px 4.5px 0px hsla(0, 0%, 0%, 0.1);
+    --shadow-lg: 0px 1px 7.5px 0px hsla(0, 0%, 0%, 0.1);
   }
 
   .dark {
@@ -91,6 +95,11 @@
     --card-foreground: 350 20% 95%;
     --primary: 350 75% 65%;
     --primary-foreground: 350 30% 10%;
+    --radius: 1.75rem;
+    --shadow-sm: 0px 1px 1.5px 0px hsla(0, 0%, 0%, 0.1);
+    --shadow: 0px 1px 3px 0px hsla(0, 0%, 0%, 0.1);
+    --shadow-md: 0px 1px 4.5px 0px hsla(0, 0%, 0%, 0.1);
+    --shadow-lg: 0px 1px 7.5px 0px hsla(0, 0%, 0%, 0.1);
   }
 }
 
